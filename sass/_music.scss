@@ -1,0 +1,120 @@
+.music{
+
+	grid-column: 1/-1;
+	margin-top: 15rem;
+	margin-bottom: 10rem;
+
+	&__header{
+		display:grid;
+		grid-template-columns: 10rem 1fr;
+		grid-template-rows: 10rem 5rem;
+		grid-gap: 2rem;
+		.icon--note{
+			grid-column: 1/2;
+			grid-row: 1/2;
+			align-self:center;
+			justify-self:center;
+		}
+		&--text{
+			grid-column: 2/3;
+			font-size: 5rem;
+			letter-spacing: .3rem;
+			text-transform: uppercase;
+			padding:1rem;
+			color:$color-rozewood;
+			border-left: 1px solid $color-rozewood;
+			font-family: var(--font-iceberg);
+		}
+	}
+
+	&__player{
+
+		display:grid;
+		grid-template-columns: 10vw repeat(4,1fr) 50vw;
+		grid-template-rows: 10rem 7rem 1fr;
+		justify-items: center;
+		align-items: center;
+		color:var(--color-primary);
+
+
+		&--title{
+			grid-column: 2/-1;
+			grid-row: 1/2;
+			justify-self: start;
+			font-size: 3rem;
+			padding-left: 1rem;
+			font-family: "Courier New", sans-serif;
+			font-weight: 400;
+		}
+		.icon--play{
+			grid-column: 2/3;
+			grid-row: 2/3;
+			@include shadow;
+		}
+		.icon--pause{
+			grid-column: 3/4;
+			grid-row: 2/3;
+			@include shadow;
+		}
+		.icon--stop{
+			grid-column: 4/5;
+			grid-row: 2/3;
+			@include shadow;
+		}
+		&--track{
+			grid-row: 2/3;
+			grid-column: 6/7;
+			width:90%;
+			height:2px;
+			background-color: var(--color-primary);
+			position:relative;
+			cursor:pointer;
+			&-zip{
+				position:absolute;
+				top:-.9rem;
+				left:0;
+				background-color: var(--color-primary);
+				width:1rem;
+				height:2rem;
+				cursor:pointer;
+
+			}
+		}
+		&--list{
+			grid-row: 3/4;
+			grid-column: 2/-1;
+			justify-self:start;
+			list-style: none;
+			font-size: 2rem;
+			font-family: sans-serif;
+			letter-spacing: .1rem;
+
+			&>*{
+				display: block;
+				padding:1rem 2rem;
+				//margin-top: 1rem;
+				border-bottom: 1px solid var(--color-primary-light-2);
+				cursor:pointer;
+				transition:all .2s;
+				width:50vw;
+				@include respond(phone){
+					width:80vw;
+				}
+				&:hover,
+				&:focus{
+					background-color: var(--color-primary-light);
+					color:#fff;
+					padding-left: 3rem;
+				}
+			}
+			&>:first-child{
+				margin-top: 5rem;
+			}
+		}
+	}
+}
+.highlight{
+	background-color: var(--color-primary-light);
+	color:#fff;
+	padding-left: 3rem;
+}

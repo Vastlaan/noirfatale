@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after{
+
+	margin:0;
+	padding:0;
+	box-sizing: inherit;
+}
+
+:root{
+
+	--color-primary: #291711;		//dark silver brown
+	--color-primary-light: #635651;
+	--color-primary-light-2: #B1AAA8;
+
+	--color-secondary: #474b24;		// army green
+	--color-secondary-dark: #070704;		//super dark army green for background
+
+	--color-eggshell: #F0F1CB;		//almost white for background
+	
+	--color-rozewood: #680F0F;		//red for some letters
+
+	//=======================FONTS================================
+
+	--font-iceberg: 'Iceberg', cursive;
+}
+$color-rozewood: #680F0F;
+::-webkit-input-placeholder {
+  font-family: "Courier New", Helvetica, sans-serif;
+  color:var(--color-primary);
+}
+
+:-ms-input-placeholder {
+  font-family: "Courier New", Helvetica, sans-serif;
+  color:var(--color-primary);
+}
+
+:-moz-placeholder {
+  font-family: "Courier New", Helvetica, sans-serif;
+  color:var(--color-primary);
+}
+
+::-moz-placeholder {
+  font-family: "Courier New", Helvetica, sans-serif;
+  color:var(--color-primary);
+}
+html{
+
+	box-sizing: border-box;
+	font-size: 62.5%;
+	background-color: snow;
+	line-height: 1.5;
+	
+
+	@include respond(tab-land){
+		font-size:50%;
+	}
+	@include respond(tab-port){
+		font-size:42.5%;
+	}
+	@include respond(phone){
+		font-size:36.5%;
+	}
+	@include respond(mini){
+		font-size:25%;
+	}
+	@include respond(large){
+		font-size: 100%;
+	}
+	
+}
+
+body{
+	width:90vw;
+	margin:0 auto;
+	background-color: var(--color-eggshell);
+	display:grid;
+	grid-template-columns: repeat(10,1fr);
+	grid-template-rows: 5.5rem 30vw;
+	grid-gap:2rem;
+	@include respond(phone){
+		margin:0;
+		width:100vw;
+		max-width:100%;
+	}
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="Utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Iceberg" rel="stylesheet">
+	</head>
+	<body>
+		<header class="header">
+			<a class="header__icon-a" href="/"><img src="img/moth.svg" alt="" class="header__icon" ></a>		
+			<h2 class="header__name">Noir Fatale</h2>
+
+			<div class="navigation">
+		        <input type="checkbox"
+		            class="navigation__checkbox"
+		            id="navi-toggle">
+		        <label class="navigation__button"
+		            for="navi-toggle">
+		            <div class="navigation__button-cross"></div>
+		        </label>
+		        <div class="navigation__background"></div>
+
+		        <nav class="navigation__nav">
+
+		            <ul class="navigation__list">
+		                <li class="navigation__item">
+		                    <a href="/" class="navigation__link" onClick="unchecked()">&nbsp; &nbsp;Home &nbsp; &nbsp;</a>
+		                </li>
+		                <li class="navigation__item">
+		                    <a href="#music" class="navigation__link" onClick="unchecked()">&nbsp; &nbsp;Music &nbsp; &nbsp;</a>
+		                </li>
+		                <li class="navigation__item">
+		                    <a href="#lyrics" class="navigation__link" onClick="unchecked()">&nbsp; &nbsp; Lyrics &nbsp; &nbsp;</a>
+		                </li>
+		                <li class="navigation__item">
+		                    <a href="#contact" class="navigation__link" onClick="unchecked()">Contact Me</a>
+		                </li>
+		            </ul>
+		        </nav>
+		    </div>
+		</header>
+
+		<section class="board">
+			<div class="board__text">Dark electronics</div>
+			<img src="img/board-2.jpg" alt="myself" class="board__img">
+		</section>
+
+		<section class="music" id="music">
+			<div class="music__header">
+				<svg class="icon icon--note">
+					<use xlink:href="img/sprite.svg#icon-beamed-note"></use>
+				</svg>
+				<p class="music__header--text">Music</p>
+			</div>
+			<div class="music__player">
+				
+				<p class="music__player--title"></p>
+				<svg class="icon icon--play" onClick="play()">
+					<use xlink:href="img/sprite.svg#icon-controller-play"></use>
+				</svg>
+				<svg class="icon icon--pause" onClick="pause()">
+					<use xlink:href="img/sprite.svg#icon-controller-paus"></use>
+				</svg>
+				<svg class="icon icon--stop" onClick="stop()">
+					<use xlink:href="img/sprite.svg#icon-controller-stop"></use>
+				</svg>
+				<div class="music__player--track" onClick="moveZip(event)">
+					<div class="music__player--track-zip"></div>
+				</div>
+				<div class="music__player--list">
+					<li class="music__player--list-1" onClick='setSource(event)'>Noir fatale - Autumn</li>
+					<li class="music__player--list-2" onClick='setSource(event)'>Noir fatale - The beauty of it all</li>
+					<li class="music__player--list-3" onClick='setSource(event)'>Noir fatale - Born to die</li>
+					<li class="music__player--list-4" onClick='setSource(event)'>Noir fatale - Tender suicide</li>
+					<li class="music__player--list-5" onClick='setSource(event)'>Noir fatale - Mefedron lake</li>
+					<li class="music__player--list-6" onClick='setSource(event)'>Noir fatale - Pray to the glory (W)hole</li>
+					<li class="music__player--list-7" onClick='setSource(event)'>Noir fatale - Romance with nature</li>
+					<li class="music__player--list-8" onClick='setSource(event)'>Noir fatale - Radion</li>
+				</div>
+			</div>
+
+		</section>
+
+		<section class="lyrics" id="lyrics">
+			<div class="lyrics__header">
+				<svg class="icon icon--text">
+					<use xlink:href="img/sprite.svg#icon-text-document"></use>
+				</svg>
+				<p class="lyrics__header--text">Lyrics</p>
+			</div>
+			<div class="lyrics__content">
+				<div class="lyrics__content--1">
+					<p>I've found myself at the lonely aley</p>
+		            <p>In the shine of the moon</p>
+		            <p>At the wind-blow solos</p>
+		            <p>Where future took the wrong turn</p>
+		            <p>Covered with the dust of guilt</p>
+		            <p>Drown in the puke of sorrows</p> 
+		            <p>With things which haven't been done</p>
+		            <p>The hopes lost forever.</p>
+		            <p>Dying slowly, every day, closer...</p>
+			    </div>
+			    <div class="lyrics__content--2">
+					<p>Z każdym dniem coraz głębiej</p>
+		            <p>zapadam się w otchłań, mroczne upojenie.</p>
+		            <p>To wzbiera we mnie do Ciebie odraza.</p>
+		            <p>To rodzi się gniew w niewoli życia,</p>
+		            <p>którego nigdy nie chciałem.</p>
+		            <p>Twoje piękno rozkłada się jak truchło gnijącego ptaka.</p> 
+		            <p>Przepadasz jak dym z obozu zagłady.</p>
+		            <p>Twoje oczy </p>
+		            <p>jak oczy wyłowionego z szamba żebraka</p>
+		            <p>są puste, nijakie.</p>
+		            <p>Zabiję Cię pogardą, zgwałcę wulgarnymi słowami</p>
+		            <p>Bez słowa odejdę, porzucę jak psa nocą w środku lasu</p>
+		            <p>i zapomnę, jak wszystkich, którzy nic dla mnie nie znaczą</p>
+			    </div>
+			    <div class="lyrics__content--3 hidden" style="display:none">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p>Culpa rerum vel at quia pariatur, cumque soluta.</p>
+					<p>ducimus dolorem ex eaque veritatis ipsam corrupti aliquam dignissimos id!</p> 
+					<p>Totam sint, sequi ad.</p>
+			    </div>
+			    <div class="lyrics__content--4 hidden" style="display:none">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p>Culpa rerum vel at quia pariatur, cumque soluta.</p>
+					<p>ducimus dolorem ex eaque veritatis ipsam corrupti aliquam dignissimos id!</p> 
+					<p>Totam sint, sequi ad.</p>
+			    </div>
+			    <div class="lyrics__content--5 hidden" style="display:none">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+					<p>Culpa rerum vel at quia pariatur, cumque soluta.</p>
+					<p>ducimus dolorem ex eaque veritatis ipsam corrupti aliquam dignissimos id!</p> 
+					<p>Totam sint, sequi ad.</p>
+			    </div>
+			</div>
+			<div class="lyrics__more" onClick="showUp()">
+				<p class="lyrics__more--text">More</p>
+				<svg class="icon--more">
+					<use xlink:href="img/sprite.svg#icon-flickr"></use>
+				</svg>
+			</div>
+			
+		</section>
+
+		<section class="contact" id="contact">
+			<h2 class="contact__heading">Contact Form</h2>
+			<!--https://banquetingsheets.herokuapp.com/email-->
+			<form action="https://script.google.com/macros/s/AKfycbw-huwiyRt4aCWNXMOx82T8EQZhRMGShiNYiM4Y/exec" method="post" class="contact__form gform" data-email="ml.antczak@gmail.com">
+				<input class="contact__form--name" type="text" name="name" placeholder="Enter your name">
+				<input class="contact__form--email" type="email" name="email" placeholder="Enter your email address" required>
+				<textarea class="contact__form--message" type="message" name="message" placeholder="Enter your message" required></textarea>
+				<input class="contact__form--submit" type="submit" value="Submit" onClick="thankyou()">
+			</form>
+		</section>
+		<footer class="footer">
+			<p>&copy; This website has been designed and made by <span>Michał Antczak</span>. All rights reserved.</p>
+			<p>&copy; The music has been created by <span>Michał Antczak</span> appearing here under a nickname Noir Fatale. It is ALOWED to copy and share this music. It is NOT ALOWED to claim an ownership over this music.</p>
+		</footer>
+		<div style="display:none;"  id="thankyou_message" class="message">
+			<div class="message__box">
+				<div class="message__close" onClick="thankyouclose()">X</div>
+				<h2 class="message__text">Thank you for contacting me!!!</h2>
+			</div>
+			
+		</div>
+		<audio class="audio">
+			<source class="audio__source" src="audio/Noir fatale - Autumn.mp3" type="audio/wav" >
+		</audio>
+		<script>
+			function unchecked(){
+				document.querySelector('#navi-toggle').checked=false ;
+			}
+
+			function thankyou(){
+				if(document.querySelector('.contact__form--name').value !== "" && document.querySelector('.contact__form--email').value !== ""){
+					console.log()
+					document.querySelector('#thankyou_message').style.display="block" 
+				}	
+			}
+
+			function thankyouclose(){
+				document.querySelector('#thankyou_message').style.display="none"
+			}
+
+			function showUp(){
+				const hidden = document.querySelectorAll('.hidden');
+				const text = document.querySelector('.lyrics__more--text');
+				let check = true;
+				hidden.forEach(item=>{
+					if(item.style.display==="none"){
+						check = true;
+					}
+					else{
+						check = false;
+					}
+				})
+				if(check){
+					hidden.forEach(item=>{
+						return item.style.display="block";
+						});
+					text.innerHTML="Hide"
+				}
+				else{
+					hidden.forEach(item=>{
+						return item.style.display="none";
+						});
+					text.innerHTML="More"
+				}
+				
+			}
+			//==========================================Audio Player===========================================
+
+			const audio = document.querySelector('.audio');
+			let source = document.querySelector('.audio__source').getAttribute('src');
+			let title = document.querySelector('.music__player--title');
+			let current =  parseInt(audio.currentTime.toFixed(0));
+			const track = document.querySelector('.music__player--track');
+			const zip = document.querySelector('.music__player--track-zip');
+			var duration =1;
+			audio.addEventListener("loadedmetadata", function(_event) {
+			    duration = audio.duration.toFixed(0);
+			});
+			let compStyles = window.getComputedStyle(track)
+			let width = compStyles.getPropertyValue('width').split(".")[0];
+			window.onresize = ()=>{
+				compStyles=window.getComputedStyle(track);
+				width = compStyles.getPropertyValue('width').split(".")[0];
+			}
+			function moveZip(event){
+				stop()
+				let left = track.getBoundingClientRect().left.toFixed(0);
+				let right = track.getBoundingClientRect().right.toFixed(0);
+				let w = right - left;
+				current=( ((event.clientX-left)*duration) / w ).toFixed(0)
+				let unit = (w/duration).toFixed(2)
+				let u = unit * current
+				zip.style.left=`${u}px`
+				play()
+			}
+			function start(){
+				inter = setInterval(()=>{
+				current=audio.currentTime.toFixed(0);
+				let unit = (width/duration).toFixed(2)
+				let u = unit * current
+				zip.style.left=`${u}px`
+			},1000)}
+			function clear(){
+				clearInterval(inter)
+			}
+			function play(){
+				audio.load()
+				audio.currentTime= current;
+				audio.play()
+				start()
+			}
+			function pause(){
+				audio.pause()
+				current=audio.currentTime;
+				clear()
+			}
+			function stop(){
+				audio.pause()
+				current=0;
+				audio.currentTime= current;
+				clear()
+				
+			}
+			(function checkSource(){
+				title.innerHTML=source.split('/')[1].split('.')[0];
+			})()
+			function highlight(){
+				const list = document.querySelector('.music__player--list').children
+				for(let i = 0; i<list.length; i++){
+					if(list[i].innerHTML===title.innerHTML){
+						list[i].className+=" highlight"
+					}
+					else{
+						list[i].className = list[i].className.split(" ")[0]
+					}
+				}
+			}
+			highlight()
+			function setSource(event){
+				
+				document.querySelector('.audio__source').setAttribute('src', `audio/${event.target.innerHTML}.mp3`)
+				title.innerHTML=event.target.innerHTML
+				highlight()
+				stop()
+				play()
+			}
+		</script>
+		<script data-cfasync="false" type="text/javascript" src="form-submission-handler.js"></script>
+	</body>
+</html>

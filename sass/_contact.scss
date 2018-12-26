@@ -1,0 +1,64 @@
+.contact{
+
+	grid-column: 1/-1;
+	margin: 10rem 0;
+
+	&__heading{
+		font-size: 5rem;
+		letter-spacing: .3rem;
+		font-weight: 300;
+		text-align: center;
+		font-family: var(--font-iceberg);
+		color:var(--color-primary);
+		letter-spacing: .1rem;
+	}
+	&__form{
+
+		margin:0 auto;
+		width:50%;
+		display:flex;
+		flex-direction: column;
+
+		@include respond(phone){
+			width:90%;
+		}
+
+		&>*{
+			margin: 2rem;
+			border:none;
+			border-radius: 5px;
+			padding: 1rem;
+			box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+
+			&:focus{
+				outline:none;
+			}
+		}
+
+		&--name{
+			
+		}
+		&--email{
+			
+		}
+		&--message{
+			height:10rem;
+		}
+		&--submit{
+			
+			background-color: var(--color-primary);
+			color:#fff;
+			cursor: pointer;
+			transition:all .2s;
+			 &:hover{
+			 	transform:translateY(-2px);
+			 	box-shadow: 0 1.2rem 1rem rgba(0,0,0,.05);
+			 }
+			 &:active{
+			 	transform:translateY(-1px);
+			 	box-shadow: 0 1.1rem 1rem rgba(0,0,0,.1);
+			 }
+
+		}
+	}
+}

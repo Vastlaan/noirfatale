@@ -1,0 +1,30 @@
+.footer{
+	grid-column: 1/-1;
+	background-color: var(--color-secondary);
+	padding:2rem .5rem;
+
+	p{
+		font-family: "Courier New", sans-serif;
+		font-weight: 300;
+		font-size: 1.2rem;
+		color:#fff;
+		text-align: center;
+		letter-spacing: .1rem;
+
+		span{
+			display:inline-block;
+			padding:.5rem;
+			background-color: lighten(#070704,10%);
+			cursor: pointer;
+			transition:all .2s;
+
+			&:hover{
+				background-color: var(--color-secondary-dark);
+				transform: scale(1.1) rotate(-3deg);
+			}
+		}
+	}
+	p:not(:last-child){
+		margin-bottom: 1rem;
+	}
+}

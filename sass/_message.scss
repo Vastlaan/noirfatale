@@ -1,0 +1,37 @@
+.message{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+	background-color: rgba(0,0,0,.8);
+
+	&__box{
+		background-color: var(--color-primary);
+		width:50%;
+		height:50%;
+		position:absolute;
+		top:25%;
+		left:25%;
+		padding:1rem;
+	}
+	&__text{
+		position:absolute;
+		top:45%;
+		left:10%;
+		font-family: "Courier New", sans-serif;
+		font-weight: 300;
+		color:#fff;
+		text-align: center;
+		font-size: 3rem;
+	}
+	&__close{
+		color:#fff;
+		font-family: "Courier New", sans-serif;
+		font-size: 3rem;
+		position:absolute;
+		top:1rem;
+		right:1rem;
+		cursor:pointer;
+	}
+}
