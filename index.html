@@ -223,10 +223,10 @@
 			    duration = audio.duration.toFixed(0);
 			});
 			let compStyles = window.getComputedStyle(track)
-			let width = compStyles.getPropertyValue('width').split(".")[0];
+			let width = compStyles.getPropertyValue('width').split("p")[0];
 			window.onresize = ()=>{
 				compStyles=window.getComputedStyle(track);
-				width = compStyles.getPropertyValue('width').split(".")[0];
+				width = compStyles.getPropertyValue('width').split("p")[0];
 			}
 			function moveZip(event){
 				stop()
@@ -265,7 +265,6 @@
 				current=0;
 				audio.currentTime= current;
 				clear()
-				
 			}
 			(function checkSource(){
 				title.innerHTML=source.split('/')[1].split('.')[0];
@@ -283,7 +282,6 @@
 			}
 			highlight()
 			function setSource(event){
-				
 				document.querySelector('.audio__source').setAttribute('src', `audio/${event.target.innerHTML}.mp3`)
 				title.innerHTML=event.target.innerHTML
 				highlight()
