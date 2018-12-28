@@ -11,6 +11,7 @@
 		justify-self:center;
 		fill:white;
 		padding:.5rem;
+		animation:appear-delay 1.5s ease-out;
 	}
 	&__name{
 		grid-column: 2/8;
@@ -21,6 +22,7 @@
 		font-weight: 300;
 		letter-spacing: .1rem;
 		color:var(--color-rozewood);
+		animation:appear 1s ease-out;
 		@include respond(tab-port){
 			grid-column: 2/8;
 		}

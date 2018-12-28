@@ -7,7 +7,7 @@
 	background-color: rgba(0,0,0,.8);
 
 	&__box{
-		background-color: var(--color-primary);
+		background-color: var(--color-secondary);
 		width:50%;
 		height:50%;
 		position:absolute;
@@ -17,21 +17,22 @@
 	}
 	&__text{
 		position:absolute;
-		top:45%;
-		left:10%;
+		top:40%;
+		left:2.5%;
 		font-family: "Courier New", sans-serif;
 		font-weight: 300;
 		color:#fff;
 		text-align: center;
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 	&__close{
-		color:#fff;
-		font-family: "Courier New", sans-serif;
-		font-size: 3rem;
 		position:absolute;
 		top:1rem;
 		right:1rem;
 		cursor:pointer;
+		z-index: 99;
+		width:5rem;
+		height:5rem;
+		fill:#fff;
 	}
 }
