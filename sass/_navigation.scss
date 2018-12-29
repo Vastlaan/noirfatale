@@ -46,12 +46,18 @@
 			}
 			&::before{
 				position:absolute;
-				top:-5px;
+				top:-10px;
+				@include respond(tab-port){
+					top:-7px;
+				}
 			}
 
 			&::after{
 				position:absolute;
-				top:5px;
+				top:10px;
+				@include respond(tab-port){
+					top:7px;
+				}
 			}
 		}
 
@@ -143,9 +149,15 @@
 	}
 	&__button:hover > &__button-cross::before{
 			transform:translateY(-2px);
+			@include respond(phone){
+				transform:translateY(0);
+			}
 		}
 	&__button:hover > &__button-cross::after{
 			transform:translateY(2px);
+			@include respond(phone){
+				transform:translateY(0);
+			}
 		}
 	&__checkbox:checked ~ &__button > &__button-cross{
 		width:0;
