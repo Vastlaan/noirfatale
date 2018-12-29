@@ -32,7 +32,7 @@
 
 		display:grid;
 		grid-template-columns: 10vw repeat(4,1fr) 50vw;
-		grid-template-rows: 10rem 7rem 1fr;
+		grid-template-rows: 10rem 7rem 4rem 1fr;
 		justify-items: center;
 		align-items: center;
 		color:var(--color-primary);
@@ -82,8 +82,34 @@
 
 			}
 		}
-		&--list{
+		&--volume{			
+			background-image: linear-gradient(to bottom right, transparent 0%, transparent 48%, rgba($color-rozewood,.9) 52%);
+			width:100%;
+			height:100%;
+		}
+		&--volumeBox{
 			grid-row: 3/4;
+			grid-column: 2/5;
+			width:100%;
+			height:100%;
+			cursor:pointer;
+			align-self:end;
+			justify-self:start;
+			display:flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			border-bottom: 1px solid rgba($color-rozewood,.6);
+		}
+		&--volume-text{
+			grid-row: 3/4;
+			grid-column: 5/-1;
+			justify-self: start;
+			padding-left: 2rem;
+			font-size: 2.2rem;
+			color: rgba($color-rozewood,1);
+		}
+		&--list{
+			grid-row: 4/5;
 			grid-column: 2/-1;
 			justify-self:start;
 			list-style: none;

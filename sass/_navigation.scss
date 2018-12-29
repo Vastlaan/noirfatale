@@ -24,6 +24,9 @@
 			width:5rem;
 			height:5rem;
 		}
+		@include respond(mini){
+			top:.6rem;
+		}
 
 		&-cross{
 			position:absolute;
@@ -50,6 +53,9 @@
 				@include respond(tab-port){
 					top:-7px;
 				}
+				@include respond(mini){
+					top:-5px;
+				}
 			}
 
 			&::after{
@@ -57,6 +63,9 @@
 				top:10px;
 				@include respond(tab-port){
 					top:7px;
+				}
+				@include respond(mini){
+					top:5px;
 				}
 			}
 		}

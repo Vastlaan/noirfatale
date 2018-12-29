@@ -47,6 +47,24 @@ let title = document.querySelector('.music__player--title');
 let current =  parseInt(audio.currentTime.toFixed(0));
 const track = document.querySelector('.music__player--track');
 const zip = document.querySelector('.music__player--track-zip');
+const volume = document.querySelector(".music__player--volumeBox");
+const v = document.querySelector(".music__player--volume");
+const vt = document.querySelector(".music__player--volume-text")
+
+const adjustVolume = (event) =>{
+	let left = volume.getBoundingClientRect().left.toFixed(0);
+	let right = volume.getBoundingClientRect().right.toFixed(0);
+	audio.volume = (event.clientX - left) / (right-left);
+	let stylesVolume = window.getComputedStyle(volume);
+	stylesVolume.getPropertyValue('width');
+	let percentage = (((event.clientX - left) / (right-left)) * 100).toFixed(0);
+	v.style.width = `${percentage}%`;
+	v.style.height = `${percentage}%`;
+	let currentAudioVolume = (audio.volume * 100).toFixed(0);
+	vt.innerHTML = `${currentAudioVolume}%`;
+}
+
+
 let duration =1;
 audio.addEventListener("loadedmetadata", function(_event) {
     duration = audio.duration.toFixed(0);
