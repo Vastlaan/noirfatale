@@ -67,7 +67,7 @@ html{
 		font-size:25%;
 	}
 	@include respond(large){
-		font-size: 100%;
+		font-size: 75%;
 	}
 	
 }
@@ -84,5 +84,8 @@ body{
 		margin:0;
 		width:100vw;
 		max-width:100%;
+	}
+	@include respond(large){
+		width: 80vw;
 	}
 }

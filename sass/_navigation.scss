@@ -27,6 +27,9 @@
 		@include respond(mini){
 			top:.6rem;
 		}
+		@include respond(large){
+			right: 10vw;
+		}
 
 		&-cross{
 			position:absolute;
@@ -84,6 +87,9 @@
 		@include respond(phone){
 			width:4rem;
 			height:4rem;
+		}
+		@include respond(large){
+			right: 10.5vw;
 		}
 	}
 	&__nav{
