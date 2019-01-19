@@ -9,6 +9,8 @@
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(2, minmax(5rem,1fr));
 	align-content: center;
+	animation:comeLeft .5s ease-out;
+	transition:animation .5s ease-out;
 	@include respond(tab-port){
 			grid-template-rows: repeat(2, minmax(25rem,1fr));
 		}
@@ -51,6 +53,9 @@
 		filter: brightness(160%);
 		box-shadow: 0 2rem 5rem rgba(0,0,0,.3);
 		margin-right: 1rem;
+		animation:appear-delay 1s ease-out;
+		transition:animation .5s  ease-out;
+
 		@include respond(tab-port){
 			width:25rem;
 			height:25rem;

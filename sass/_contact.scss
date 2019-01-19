@@ -11,7 +11,10 @@
 		font-family: var(--font-iceberg);
 		color:var(--color-primary);
 		letter-spacing: .1rem;
-		margin-bottom: 10rem;
+		margin-bottom: 3rem;
+		@include respond(phone){
+		 	font-size: 6rem;
+		 }
 	}
 	&__form{
 
@@ -60,6 +63,10 @@
 			 &:active{
 			 	transform:translateY(-1px);
 			 	box-shadow: 0 1.1rem 1rem rgba(0,0,0,.1);
+			 }
+
+			 @include respond(phone){
+			 	font-size: 4rem;
 			 }
 
 		}
