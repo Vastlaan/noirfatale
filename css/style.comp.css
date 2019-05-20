@@ -8,14 +8,31 @@
 
 @keyframes appear-delay {
   0% {
-    opacity: 0;
-    transform: scale(0); }
+    opacity: 0; }
   50% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    visibility: visible; } }
+
+@keyframes comeOut {
+  0% {
     opacity: 0;
     transform: scale(0); }
   100% {
     opacity: 1;
     transform: scale(1); } }
+
+@keyframes comeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-120%); }
+  25% {
+    opacity: 0;
+    transform: translateX(-120%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 *,
 *::before,
@@ -101,8 +118,7 @@ body {
     align-self: center;
     justify-self: center;
     fill: white;
-    padding: .5rem;
-    animation: appear-delay 1.5s ease-out; }
+    padding: .5rem; }
   .header__name {
     grid-column: 2/8;
     text-align: center;
@@ -111,8 +127,7 @@ body {
     text-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     font-weight: 300;
     letter-spacing: .1rem;
-    color: var(--color-rozewood);
-    animation: appear 1s ease-out; }
+    color: var(--color-rozewood); }
     @media only screen and (max-width: 56.25em) {
       .header__name {
         grid-column: 2/8; } }
@@ -136,7 +151,9 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, minmax(5rem, 1fr));
-  align-content: center; }
+  align-content: center;
+  animation: comeLeft .5s ease-out;
+  transition: animation .5s ease-out; }
   @media only screen and (max-width: 56.25em) {
     .board {
       grid-template-rows: repeat(2, minmax(25rem, 1fr)); } }
@@ -168,7 +185,9 @@ body {
     transform: translateY(50%);
     filter: brightness(160%);
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.3);
-    margin-right: 1rem; }
+    margin-right: 1rem;
+    animation: appear-delay 1s ease-out;
+    transition: animation .5s  ease-out; }
     @media only screen and (max-width: 56.25em) {
       .board__img {
         width: 25rem;
@@ -395,7 +414,10 @@ body {
     font-family: var(--font-iceberg);
     color: var(--color-primary);
     letter-spacing: .1rem;
-    margin-bottom: 10rem; }
+    margin-bottom: 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .contact__heading {
+        font-size: 6rem; } }
   .contact__form {
     margin: 0 auto;
     width: 50%;
@@ -427,6 +449,9 @@ body {
       .contact__form--submit:active {
         transform: translateY(-1px);
         box-shadow: 0 1.1rem 1rem rgba(0, 0, 0, 0.1); }
+      @media only screen and (max-width: 37.5em) {
+        .contact__form--submit {
+          font-size: 4rem; } }
 
 .footer {
   grid-column: 1/-1;
@@ -445,13 +470,15 @@ body {
     @media only screen and (max-width: 37.5em) {
       .footer p {
         font-size: 1.8rem; } }
-    .footer p span {
+    .footer p a {
+      color: #fff;
+      text-decoration: none;
       display: inline-block;
       padding: .5rem;
       background-color: #272717;
       cursor: pointer;
       transition: all .2s; }
-      .footer p span:hover {
+      .footer p a:hover {
         background-color: var(--color-secondary-dark);
         transform: scale(1.1) rotate(-3deg); }
   .footer p:not(:last-child) {

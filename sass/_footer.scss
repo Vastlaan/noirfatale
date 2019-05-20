@@ -15,7 +15,9 @@
 		@include respond(phone){
 			font-size: 1.8rem;
 		}
-		span{
+		a{
+			color:#fff;
+			text-decoration: none;
 			display:inline-block;
 			padding:.5rem;
 			background-color: lighten(#070704,10%);
