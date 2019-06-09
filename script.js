@@ -9,6 +9,7 @@ const thankyou=()=>{
 		document.querySelector('#thankyou_message').style.display="block" 
 	}	
 }
+
 const thankyouclose=()=>{
 	document.querySelector('#thankyou_message').style.display="none"
 }
