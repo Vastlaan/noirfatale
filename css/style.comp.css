@@ -557,7 +557,8 @@ body {
   @media only screen and (max-width: 37.5em) {
     .navigation__button {
       width: 5rem;
-      height: 5rem; } }
+      height: 5rem;
+      right: 1vw; } }
   @media only screen and (max-width: 25em) {
     .navigation__button {
       top: .6rem; } }
@@ -612,7 +613,8 @@ body {
   @media only screen and (max-width: 37.5em) {
     .navigation__background {
       width: 4rem;
-      height: 4rem; } }
+      height: 4rem;
+      right: 1.1vw; } }
   @media only screen and (min-width: 100em) {
     .navigation__background {
       right: 10.5vw; } }
