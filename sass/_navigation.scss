@@ -23,6 +23,7 @@
 		@include respond(phone){
 			width:5rem;
 			height:5rem;
+			right:1vw;
 		}
 		@include respond(mini){
 			top:.6rem;
@@ -87,6 +88,7 @@
 		@include respond(phone){
 			width:4rem;
 			height:4rem;
+			right:1.1vw;
 		}
 		@include respond(large){
 			right: 10.5vw;
